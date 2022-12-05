@@ -146,6 +146,7 @@
             Dui = duiA
         Else
             MsgBox("Debe escribir el dui de formato 00000000-0")
+            Exit Sub
         End If
         If correoA.Length = 0 Then
             MsgBox("Debe escribir el correo del alumno")
