@@ -133,7 +133,7 @@
         Else
             año = añoA
         End If
-        If capacidadA = 0 Then
+        If capacidadA.Length = 0 Then
             MsgBox("debe escribir la capacidad del auto")
             Exit Sub
         Else
