@@ -6,8 +6,8 @@
     Private Genero As String
     Private Direccion As String
     Private Dui As String
-    Private Edad As String
     Private Correo As String
+    Private Edad As String
 
     'indica si los datos ingresados estan completos
     Public datosCompletos As Boolean
@@ -103,8 +103,8 @@
                            ByVal generoA As String,
                            ByVal direccionA As String,
                            ByVal duiA As String,
-                           ByVal edadA As String,
-                           ByVal correoA As String
+                           ByVal correoA As String,
+                           ByVal edadA As String
                            )
         'asume que los datos ingresados son incorrectos
         datosCompletos = False
@@ -127,13 +127,8 @@
         Else
             Apellido = apellidoA
         End If
-        If generoA.Length = 0 Then
-            MsgBox("Debe escribir el genero del alumno")
-            Exit Sub
-        Else
-            Genero = generoA
-        End If
         If generoA = "F" Or generoA = "M" Then
+            Genero = generoA
         Else
             MsgBox("debe escribir F para femenino y M para masculino")
             Exit Sub
@@ -144,26 +139,25 @@
         Else
             Direccion = direccionA
         End If
-
-        If duiA.Length > 0 And duiA.Length < 9 Then
-            MsgBox("Debe escribir el dui de formato 00000000-0")
+        If duiA.Length = 0 Then
+            MsgBox("Debe escribir el dui del alumno")
             Exit Sub
-        Else
+        ElseIf duiA.Length > 0 And duiA.Length = 10 Then
             Dui = duiA
-        End If
-
-        If edadA.Length = 0 Then
-            MsgBox("Debe escribir la edad del alumno")
-            Exit Sub
         Else
-            Edad = edadA
+            MsgBox("Debe escribir el dui de formato 00000000-0")
         End If
-
         If correoA.Length = 0 Then
             MsgBox("Debe escribir el correo del alumno")
             Exit Sub
         Else
             Correo = correoA
+        End If
+        If edadA.Length = 0 Then
+            MsgBox("Debe escribir la edad del alumno")
+            Exit Sub
+        Else
+            Edad = edadA
             datosCompletos = True
         End If
     End Sub

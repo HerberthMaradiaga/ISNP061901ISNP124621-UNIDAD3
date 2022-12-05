@@ -15,8 +15,8 @@
                            txtGenero.Text,
                            txtDireccion.Text,
                            txtDui.Text,
-                           txtEdad.Text,
-                           txtCorreo.Text
+                           txtCorreo.Text,
+                           txtEdad.Text
                            )
 
 
