@@ -308,6 +308,7 @@ Partial Class Form2
         '
         'btnGenerar
         '
+        Me.btnGenerar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGenerar.Location = New System.Drawing.Point(294, 36)
         Me.btnGenerar.Name = "btnGenerar"
         Me.btnGenerar.Size = New System.Drawing.Size(140, 30)
